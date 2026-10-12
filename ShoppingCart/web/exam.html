@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+<h2>Online MCQ Examination</h2>
+
+<form action="ExamServlet" method="post">
+
+    1. What is the capital of India?<br>
+    <input type="radio" name="q1" value="Mumbai" required> Mumbai<br>
+    <input type="radio" name="q1" value="New Delhi"> New Delhi<br>
+    <input type="radio" name="q1" value="Pune"> Pune<br><br>
+
+    2. Which planet is known as the Red Planet?<br>
+    <input type="radio" name="q2" value="Earth" required> Earth<br>
+    <input type="radio" name="q2" value="Mars"> Mars<br>
+    <input type="radio" name="q2" value="Jupiter"> Jupiter<br><br>
+
+    3. How many days are there in a leap year?<br>
+    <input type="radio" name="q3" value="365" required> 365<br>
+    <input type="radio" name="q3" value="366"> 366<br>
+    <input type="radio" name="q3" value="364"> 364<br><br>
+
+    <input type="submit" value="Submit Exam">
+    <input type="reset" value="Clear Options">
+
+</form>
+
+<br>
+<a href="ResultServlet">View Result</a>
+<br><br>
+<a href="LogoutServlett">Logout</a>
+
+</body>
+</html>
