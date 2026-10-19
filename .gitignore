@@ -2,3 +2,6 @@
 /ShoppingCart/dist/
 /ShoppingCart/build/
 /.git-backups/
+/JSP/nbproject/private/
+/JSP/build/
+/JSP/dist/
