@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -27,6 +28,9 @@ public class AuthenticationServlet extends HttpServlet {
                 String x = "PQR";
                 session.setAttribute("user",x);
                 response.sendRedirect("home.jsp");
+                // RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
+                // rd.forward(request,response);
+                //above we are using rd, we are hiding the hiding servlet, we are displaying the route
             }
             else{
                 String str = "Invalid Username or Password";

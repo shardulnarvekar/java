@@ -1,0 +1,9 @@
+<h1>Campus Item Desk</h1>
+<nav>
+    <a href="items.jsp">View Items</a> |
+    <a href="add-item.jsp">Add Found Item</a> |
+    <form action="LogoutServlet" method="post" class="inline-form">
+        <button type="submit">Logout</button>
+    </form>
+</nav>
+<hr>

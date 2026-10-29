@@ -1,0 +1,19 @@
+body { font-family: Arial, sans-serif; margin: 25px; color: #222; background: white; }
+h1 { font-size: 26px; }
+h2 { font-size: 20px; }
+nav { margin-bottom: 15px; }
+a { color: #0645ad; }
+label { display: inline-block; min-width: 110px; vertical-align: top; }
+input, textarea, button { font: inherit; padding: 4px; }
+input { width: 230px; max-width: 90%; }
+textarea { width: 300px; max-width: 90%; }
+button { cursor: pointer; }
+form { margin: 15px 0; }
+.inline-form { display: inline; }
+.table-area { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #999; padding: 8px; text-align: left; vertical-align: top; }
+th { background: #eee; }
+.return-form { margin: 0; }
+.return-form input { display: block; width: 140px; margin: 5px 0; }
+.return-form button { white-space: nowrap; }

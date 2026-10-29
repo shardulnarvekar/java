@@ -1,0 +1,37 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="campus.lost.and.found.web.*"%>
+<%
+    response.setHeader("Cache-Control", "no-store");
+    String context = request.getContextPath();
+    User currentUser = (User) session.getAttribute("user");
+    String formToken = WebSupport.token(session);
+    String title = (String) request.getAttribute("title");
+    if (title == null) title = "Campus Lost & Found";
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= WebSupport.html(title) %> | Campus Lost &amp; Found</title>
+    <link rel="stylesheet" href="<%= context %>/css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="<%= context %>/"><span class="brand-mark">LF</span><span>Campus Lost &amp; Found<small>UNIVERSAL AI UNIVERSITY</small></span></a>
+    <% if (currentUser != null) { %>
+    <nav aria-label="Main navigation">
+        <a href="<%= context %>/SearchServlet">All reports</a>
+        <a href="<%= context %>/SearchServlet?view=mine">My reports</a>
+        <a href="<%= context %>/SearchServlet?view=history">Claim history</a>
+        <a href="<%= context %>/ProfileServlet">My profile</a>
+        <form action="<%= context %>/LogoutServlet" method="post" class="inline"><input type="hidden" name="token" value="<%= formToken %>"><button class="nav-button">Sign out</button></form>
+    </nav>
+    <% } else { %><nav aria-label="Account navigation"><a href="<%= context %>/login.jsp">Sign in</a><a href="<%= context %>/register.jsp">Create account</a></nav><% } %>
+</header>
+<main class="container">
+<% String flash = (String) session.getAttribute("message"); if (flash != null) { session.removeAttribute("message"); %>
+<div class="notice success" role="status"><%= WebSupport.html(flash) %></div>
+<% } if (request.getAttribute("error") != null) { %>
+<div class="notice error" role="alert"><%= WebSupport.html(request.getAttribute("error")) %></div>
+<% } %>

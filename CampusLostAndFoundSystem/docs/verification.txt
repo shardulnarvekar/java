@@ -1,0 +1,31 @@
+Verification completed on 20 October 2026.
+
+University localization verified on 20 October 2026:
+- Application branding: Universal Ai University, Karjat, Mumbai, Maharashtra, India.
+- All 29 existing sample reports use Indian names, demonstration +91 contacts and campus locations.
+- SQL/LostFoundDB.sql creates the same localized samples for a fresh installation.
+- Account usernames/passwords/roles, report IDs/times/statuses, and claim account links were preserved.
+- Existing session logs were preserved; closing the previous application recorded its normal logout entry.
+- The 74 regression checks and three setup checks passed again after localization.
+- All nine NetBeans form files match their Java components and event handlers.
+- NetBeans F6 launched the updated university login screen; the rebuilt distribution connects to lostfounddb.
+- Active source, SQL and documentation were checked for obsolete sample references.
+- Current login, registration and report screenshots are in docs/report-images.
+- Previous screenshots, migration and project/database backups are in work/before-university-localization.
+- All 432 files from other Java projects still match their original hashes.
+
+Earlier structural refactor verification:
+
+- NetBeans 25 F6 launched the campus LoginForm successfully.
+- LoginForm, MainFrame and SearchLostItem opened in GUI Builder Design view.
+- All nine .form files match their Java components and event handler names.
+- Ant build produced dist/CampusLostAndFoundSystem.jar with the MySQL driver.
+- compile.cmd and compile.ps1 both passed from outside the project directory.
+- DBConnect connected to the existing lostfounddb schema using the classroom credentials.
+- 74 regression checks passed in a temporary database copy.
+- Three SQL setup checks passed: fresh initialization, repeat initialization, and no re-seeding after intentional sample deletion.
+- Original campus database contents were fingerprinted before/after regression checks and did not change.
+- Temporary verification databases were removed.
+- All 432 files from the other Java projects matched the pre-refactor hashes, including the pre-existing JSP modification.
+
+See work/verification-results.txt for individual functional checks. The original project ZIP and database SQL backup are under work/.

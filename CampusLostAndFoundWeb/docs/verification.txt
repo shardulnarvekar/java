@@ -1,0 +1,102 @@
+PASS: Protected search redirects anonymous requests
+PASS: WEB-INF/views/profile.jsp returns 404
+PASS: login.jsp returns 200
+PASS: POST AuthenticationServlet returns 200
+PASS: Login verifies selected role
+PASS: POST AuthenticationServlet returns 200
+PASS: Prepared statement rejects login SQL injection
+PASS: register.jsp returns 200
+PASS: POST RegisterServlet returns 200
+PASS: Registration creates ordinary USER account
+PASS: register.jsp returns 200
+PASS: POST RegisterServlet returns 200
+PASS: Registration creates ordinary USER account
+PASS: login.jsp returns 200
+PASS: POST AuthenticationServlet returns 200
+PASS: Login accepted for qa_web_one
+PASS: login.jsp returns 200
+PASS: POST AuthenticationServlet returns 200
+PASS: Login accepted for qa_web_two
+PASS: login.jsp returns 200
+PASS: POST AuthenticationServlet returns 200
+PASS: Login accepted for admin
+PASS: Initial sample reports and pagination load
+PASS: SearchServlet?page=2 returns 200
+PASS: Second results page works
+PASS: SearchServlet?name=Card&category=Identification&status=Unclaimed&location=Library&keyword=student returns 200
+PASS: Combined search filters work
+PASS: SearchServlet?sort=oldest&page=2147483647 returns 200
+PASS: SearchServlet?view=mine returns 200
+PASS: My reports is scoped to the signed-in user
+PASS: ReportServlet returns 200
+PASS: POST ReportServlet returns 200
+PASS: Invalid calendar dates are rejected without saving
+PASS: POST ReportServlet returns 200
+PASS: Report creation escapes user-supplied HTML
+PASS: Owner actions and claim form appear
+PASS: ReportServlet?id=30 returns 403
+PASS: POST ReportServlet returns 403
+PASS: ItemServlet?id=30 returns 200
+PASS: Another user cannot edit the report
+PASS: ReportServlet?id=30 returns 200
+PASS: POST ReportServlet returns 200
+PASS: Owner can edit an unclaimed report
+PASS: Missing session form token prevents mutation
+PASS: ItemServlet?id=30 returns 200
+PASS: POST ClaimServlet returns 200
+PASS: Claim is recorded
+PASS: ReportServlet?id=30 returns 403
+PASS: ItemServlet?id=30 returns 200
+PASS: POST ClaimServlet returns 200
+PASS: A second claim cannot replace the first claim
+PASS: SearchServlet?view=history returns 200
+PASS: Claimant history includes the claimed item
+PASS: SearchServlet?view=history returns 200
+PASS: Another user does not receive claimant history
+PASS: ReportServlet?id=30 returns 200
+PASS: POST ReportServlet returns 200
+PASS: Administrator edit preserves claim details and status
+PASS: ReportServlet returns 200
+PASS: POST ReportServlet returns 200
+PASS: ItemServlet?id=31 returns 200
+PASS: POST ClaimServlet returns 403
+PASS: ItemServlet?id=31 returns 200
+PASS: POST ClaimServlet returns 200
+PASS: Administrator handover links a registered recipient
+PASS: SearchServlet?view=history returns 200
+PASS: Handover appears in recipient history
+PASS: ReportServlet returns 200
+PASS: POST ReportServlet returns 200
+PASS: ReportServlet?action=delete&id=32 returns 200
+PASS: Deletion has a confirmation page
+PASS: POST ReportServlet returns 200
+PASS: Owner can delete an unclaimed report
+PASS: ItemServlet?id=32 returns 404
+PASS: ProfileServlet returns 200
+PASS: POST ProfileServlet returns 200
+PASS: Password change verifies current password
+PASS: POST ProfileServlet returns 200
+PASS: Password change succeeds
+PASS: POST LogoutServlet returns 200
+PASS: Logout invalidates the session
+PASS: Logout creates a database session log
+PASS: login.jsp returns 200
+PASS: POST AuthenticationServlet returns 200
+PASS: Login accepted for qa_web_one
+PASS: ItemServlet?id=not-a-number returns 400
+PASS: Invalid IDs show a friendly page
+PASS: ReportServlet?action=delete&id=30 returns 200
+PASS: POST ReportServlet returns 200
+PASS: ItemServlet?id=30 returns 404
+PASS: SearchServlet?view=history returns 200
+PASS: Administrator history includes all claims and handovers
+PASS: Temporary test reports removed; 29 sample reports remain
+PASS: 711 pre-existing files are unchanged
+PASS: Existing lostfounddb data is unchanged
+PASS: NetBeans IDE 25 recognizes the project as a Java Web application.
+PASS: NetBeans IDE Clean and Build reports BUILD SUCCESSFUL.
+PASS: Desktop and mobile browser layouts have no page-level horizontal overflow.
+PASS: WAR includes the MySQL driver and servlet classes.
+PASS: After the user confirmed Tomcat authentication, NetBeans deployment succeeded on port 8080.
+PASS: Deployed student login and 29-report search page verified over HTTP on port 8080.
+PASS: All 711 pre-existing project files remain unchanged after NetBeans deployment.

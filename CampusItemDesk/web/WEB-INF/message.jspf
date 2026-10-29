@@ -1,0 +1,9 @@
+<%
+    String message = (String) session.getAttribute("message");
+    if (message != null) {
+%>
+<p role="status"><b><%= message %></b></p>
+<%
+        session.removeAttribute("message");
+    }
+%>

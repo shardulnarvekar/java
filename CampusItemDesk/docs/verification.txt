@@ -1,0 +1,23 @@
+PASS: Tomcat serves the new login page
+PASS: Anonymous access to items.jsp redirects to login
+PASS: Anonymous access to add-item.jsp redirects to login
+PASS: Anonymous AddItemServlet request is rejected
+PASS: Anonymous ReturnItemServlet request is rejected
+PASS: Invalid login shows a plain error message
+PASS: Shared login works and sample items load
+PASS: Item-name search filters the table
+PASS: Empty search results show a clear message
+PASS: Search uses a prepared statement
+PASS: Add-item form compiles and loads
+PASS: Blank item names cannot be saved
+PASS: Invalid calendar dates cannot be saved
+PASS: Adding an item persists data and displays typed HTML as text
+PASS: Returning an item requires a recipient
+PASS: Invalid item IDs show a readable message
+PASS: Mark Returned saves the recipient and changes the status
+PASS: A returned item cannot be reassigned by a repeated submission
+PASS: Logout returns to login
+PASS: Logged-out sessions cannot view items
+PASS: Temporary test item removed; sample records kept
+PASS: 792 pre-existing files, including the polished version, are unchanged
+PASS: Both original lost-and-found databases are unchanged
